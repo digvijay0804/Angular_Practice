@@ -1,0 +1,30 @@
+<!-- <h1>{{ name() }}</h1>
+
+<input
+  [value]="name()"
+  (input)="name.set($event.target.value)"
+> -->
+
+<!-- <h2>{{ user() }}</h2> -->
+
+<hr>
+
+<br><br>
+
+<input
+  [value]="user().name"
+  (input)="updateName($event.target.value)"
+  placeholder="Name"
+>
+
+<br><br>
+
+<h2>User Name: {{ user().name }}</h2>
+
+<hr>
+
+<h2>User Age: {{ user().age }}</h2>
+
+<button (click)="updateAge()">Increase Age</button>
+
+<hr>

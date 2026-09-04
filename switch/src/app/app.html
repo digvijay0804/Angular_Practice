@@ -1,0 +1,42 @@
+<button (click)="tab='home'">Home</button>
+<button (click)="tab='about'">About</button>
+<button (click)="tab='service'">Service</button>
+<button (click)="tab='contact'">Contact</button>
+
+@switch (tab) {
+  @case ('home') {
+    <p>Home Page</p>
+  }
+  @case ('about') {
+    <p>About Page</p>
+  }
+  @case ('service') {
+    <p>Service Page</p>
+  }
+  @case ('contact') {
+    <p>Contact Page</p>
+  }
+  @default {
+    <p>404 Page not Found </p>
+  }
+}
+
+
+
+
+<input (input)="updatecat($event.target.value)" placeholder="Enter Your Categories"/>
+
+@switch (categories) {
+  @case ('fruit') {
+    <p> Fruit categories</p>
+  }
+  @case ('vegetable') {
+    <p> Vegetable categories</p>
+  }
+  @case ('ice-cream') {
+    <p> cold categories</p>
+  }
+  @default{
+    <p> Empty categories</p>
+  }
+}

@@ -1,0 +1,49 @@
+<h1>Product Cart</h1>
+
+<h2>User Information</h2>
+<label>Name:</label>
+<input
+  type="text"
+  placeholder="Enter your name"
+  [ngModel]="user().name"
+  (ngModelChange)="user.set({ ...user(), name: $event })"
+>
+
+<br><br>
+
+<label>Email:</label>
+<input
+  type="email"
+  placeholder="Enter your email"
+  [ngModel]="user().email"
+  (ngModelChange)="user.set({ ...user(), email: $event })"
+>
+
+<h2>Products</h2>
+
+@for (product of products(); track product.name) {
+
+  <div>
+    <h3>{{ product.name }}</h3>
+
+    <p>Price: ₹{{ product.price }}</p>
+
+    <p>Quantity: {{ product.quantity }}</p>
+
+    <button (click)="decreaseQuantity(product)">-</button>
+
+    <button (click)="increaseQuantity(product)">+</button>
+
+    <br><br>
+
+    <button>Add to Cart</button>
+  </div>
+
+  <hr>
+}
+
+<h2>Cart Total: ₹{{ cartTotal() }}</h2>
+
+<button (click)="orderConform()">Order Confirm</button>
+
+@if (orderMessage()) { <p>{{user().name}} <br> {{orderMessage()}}</p> }

@@ -1,0 +1,57 @@
+<!-- 
+@if (isLoggedIn) {
+  <P>Well-Come To DashBorad</P>
+}@else {
+  <p>Please Login</p>
+} -->
+
+<input (input)="UpdateMark($event.target.value)" placeholder="Enter marks">
+
+@if (marks>=90) {
+  <h2>Excellent</h2>
+}
+@else if (marks>=70){
+  <h2>Good</h2>
+}
+@else if (marks>=50){
+  <h2>Average</h2>
+}
+@else {
+  <h2>Needs Improvement</h2>
+}
+
+@if (age>=18 && hasId== true) {
+  <h2>You are eligible </h2>
+}@else {
+  <h2>You are not  eligible </h2>
+}
+<div>
+<button (click)="UpdateRole('admin')">Admin</button>
+<button (click)="UpdateRole('user')">User</button>
+<button (click)="UpdateRole('guest')">Guest</button>
+</div>
+
+@switch (role) {
+  @case ("admin") {
+    <h2>Admin Dashboard</h2>
+  }
+  @case ("user") {
+    <h2>User Dashboard</h2>
+  }
+  @case ("guest") {
+    <h2>Guest Access</h2>
+  }
+  @default {
+    <h2>Invaild Role</h2>
+  }
+}
+
+@for (item of students; track $index;
+let i = $index) {
+  <h2>{{i}} -> {{item}}</h2>
+  <h2>{{$count}}</h2>
+  <h2>{{$even}}</h2>
+  <h2>{{$odd}}</h2>
+  <h2>{{$first}}</h2>
+  <h2>{{$last}}</h2>
+}

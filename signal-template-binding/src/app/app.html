@@ -1,0 +1,19 @@
+<h1>User dashboard</h1>
+<hr>
+<button (click)="makeAdmin()">Admin</button> 
+<button (click)="makeUser()">User</button>
+
+@if (role() ==='admin') {
+  <p>Well-Come Admin</p>
+}@else {
+  <p>Normal User</p>
+}
+
+<hr>
+<h3>Available Features</h3>
+
+<ul>
+  @for (feature of features(); track $index) {
+    <li>{{feature}}</li>
+  }
+</ul>

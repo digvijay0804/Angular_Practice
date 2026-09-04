@@ -1,0 +1,14 @@
+.hover-box {
+  width: 200px;
+  height: 100px;
+  padding: 20px;
+  background-color: lightblue;
+  border: 2px solid black;
+  cursor: pointer;
+  text-align: center;
+}
+
+.hover-box:hover {
+  background-color: darkblue;
+  color: white;
+}

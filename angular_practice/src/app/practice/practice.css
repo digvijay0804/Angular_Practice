@@ -1,0 +1,28 @@
+
+h2 {
+  margin-bottom: 10px;
+}
+
+img {
+  width: 200px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+input {
+  display: block;
+  width: 250px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+p {
+  font-size: 18px;
+  margin: 10px 0;
+}

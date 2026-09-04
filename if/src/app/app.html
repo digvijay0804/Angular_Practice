@@ -1,0 +1,25 @@
+<!-- @if (isLoggedIn) {
+  <h2>Wellcome To Cliqtros</h2>
+} @else {
+  <h1>please Login</h1>
+} -->
+
+<!-- @if (mark >50) {
+  <p>You are pass</p>
+} @else {
+  <p>You Are Fail</p>
+} -->
+
+<!-- <button (click)="toggleBox()">Toggle</button>
+
+@if (Showbox) {
+  <div class="Box">This is Box</div>
+} -->
+
+<input (input)="UpdateAge($event.target.value)" placeholder="Enter Your Age">
+
+@if (age >18) {
+  <h2>You Are Eligible To Voting </h2>
+} @else {
+  <h2>You Are Not Eligible To Voting</h2>
+}

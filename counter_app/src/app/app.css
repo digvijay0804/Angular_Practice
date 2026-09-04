@@ -1,0 +1,108 @@
+/* ===== Simple Counter App - app.component.css ===== */
+
+:host {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 64px 72px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  width: 100%;
+  max-width: 560px;
+  display: block;
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h2 {
+  font-family: 'Georgia', serif;
+  font-size: 38px;
+  font-weight: 700;
+  color: #2d2d3a;
+  margin: 0 0 32px 0;
+  letter-spacing: 0.5px;
+}
+
+.count {
+  font-family: 'Georgia', serif;
+  font-size: 100px;
+  font-weight: 700;
+  color: #4a4a6a;
+  margin: 0 0 40px 0;
+  line-height: 1;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.button button {
+  border: none;
+  border-radius: 12px;
+  padding: 18px 32px;
+  font-size: 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.2s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+}
+
+.button button:active {
+  transform: translateY(1px);
+}
+
+/* Plus button */
+.button button:nth-child(1) {
+  background: #667eea;
+  color: #fff;
+}
+.button button:nth-child(1):hover {
+  background: #5568d3;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(102, 126, 234, 0.4);
+}
+
+/* Minus button */
+.button button:nth-child(2) {
+  background: #f2f2f7;
+  color: #333;
+}
+.button button:nth-child(2):hover {
+  background: #e4e4ec;
+  transform: translateY(-2px);
+}
+
+/* Reset button */
+.button button:nth-child(3) {
+  background: #ff5c5c;
+  color: #fff;
+}
+.button button:nth-child(3):hover {
+  background: #e64545;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 14px rgba(255, 92, 92, 0.4);
+}
+
+@media (max-width: 480px) {
+  :host {
+    padding: 44px 32px;
+  }
+  .count {
+    font-size: 72px;
+  }
+  h2 {
+    font-size: 28px;
+  }
+}

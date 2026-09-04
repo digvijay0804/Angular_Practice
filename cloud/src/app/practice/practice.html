@@ -1,0 +1,24 @@
+<p>practice works!</p>
+
+<h2>Hey Angular</h2>
+<input [(ngModel)]="username">
+
+<h2> My Name is {{username}}</h2>
+<h2>{{course}}</h2>
+<p>{{div}}</p>
+<h2>{{a*b}}</h2>
+<h2>{{getMessage()}}</h2>
+<img [src]="imageUrl" >
+<img [width]="imageWidth">
+<input [value]="username">
+<button (click)="showMessage()">showMessage</button>
+
+<h2>count is {{count}}</h2>
+
+<button (click)="increment()">increment</button>
+<button (click)="decrement()">decrement</button>
+<input (input)="getValue($event)">
+
+<h2>{{ signalCount() }}</h2>
+
+<button (click)="changeCount()">changeCount</button>

@@ -1,0 +1,45 @@
+<div class="auth-wrapper">
+  <div class="auth-card">
+    <h2>{{ isLoginMode() ? 'Login' : 'Register' }}</h2>
+
+    <form [formGroup]="authForm" (ngSubmit)="onSubmit()" class="auth-form">
+
+      @if (!isLoginMode()) {
+        <div class="form-group">
+          <label for="fullName">Full Name</label>
+          <input id="fullName" type="text" formControlName="fullName" placeholder="Enter your name" />
+          @if (authForm.get('fullName')?.touched && authForm.get('fullName')?.invalid) {
+            <span class="error">Name must be at least 3 characters</span>
+          }
+        </div>
+      }
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input id="email" type="email" formControlName="email" placeholder="you@example.com" />
+        @if (authForm.get('email')?.touched && authForm.get('email')?.invalid) {
+          <span class="error">Enter a valid email</span>
+        }
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input id="password" type="password" formControlName="password" placeholder="••••••••" />
+        @if (authForm.get('password')?.touched && authForm.get('password')?.invalid) {
+          <span class="error">Password must be at least 6 characters</span>
+        }
+      </div>
+
+      <button type="submit" class="submit-btn">{{ isLoginMode() ? 'Login' : 'Register' }}</button>
+    </form>
+
+    @if (successMessage()) {
+      <p class="success-msg">{{ successMessage() }}</p>
+    }
+
+    <p class="toggle-text">
+      {{ isLoginMode() ? "Don't have an account?" : "Already have an account?" }}
+      <a (click)="toggleMode()">{{ isLoginMode() ? 'Register' : 'Login' }}</a>
+    </p>
+  </div>
+</div>

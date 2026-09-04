@@ -1,0 +1,14 @@
+<h2>{{ lName | uppercase }}</h2>
+<h2>{{uName | lowercase}}</h2>
+
+<h2>short date: {{today | date:'short'}}</h2>
+
+<h2>Full date: {{today | date:'full'}}</h2>
+
+<h2>Custom date: {{today | date:'dd-mm-yyyy'}}</h2>
+
+<h2>INR {{amount | currency: 'INR'}}</h2>
+
+<h2>USD {{amount | currency: 'USD'}}</h2>
+
+<h2> {{per | percent}}</h2>

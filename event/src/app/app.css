@@ -1,0 +1,13 @@
+.hover-box {
+  width: 200px;
+  height: 100px;
+  background-color: lightblue;
+  border: 1px solid black;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.hover-box:hover {
+  background-color: darkblue;
+  color: white;
+}

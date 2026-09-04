@@ -1,0 +1,18 @@
+<h2>Welcome to Student Management System</h2>
+<input [(ngModel)] = "studentname">
+<p>{{studentname}}</p>
+<p>{{course}}</p>
+<p>{{collage}}</p>
+
+<img [src]= "imageUrl">
+<h2>{{messge}}</h2>
+<button (click)="showmessge()">show Messge</button>
+
+<p>Student Count :{{count()}}</p>
+<button (click)="increment()">increment</button>
+<button (click)="decrement()">decrement</button>
+
+<input (input)="getValue($event)">
+
+<p>{{value}}</p>
+<p>{{students}}</p>

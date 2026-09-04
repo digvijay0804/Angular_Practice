@@ -1,0 +1,26 @@
+<!-- 
+@if (status=="pending") {
+  <h3>Order Is pending</h3>
+} @else if (status=="processing"){
+  <h3>Order has Processing</h3>
+} @else if (status=="deliver"){
+  <h3>Order is Deliver</h3>
+} @else { Unknow Status} -->
+
+<input (input)="PutNum($event.target.value)" placeholder="Enter Your Marks"/>
+
+@if (marks>90) {
+  <h3>You Are A+ Grade</h3>
+}
+@else if (marks>70) {
+  <h3>You Are B+ Grade</h3>
+}
+@else if (marks>50) {
+  <h3>You Are C+ Grade</h3>
+}
+@else if (marks>35) {
+  <h3>You Are pass</h3>
+}
+@else {
+  <h3>You Are Fail</h3>
+}

@@ -1,0 +1,19 @@
+<h2>Student Name: {{studentName}}</h2>
+<h2>Course Name: {{courseName}}</h2>
+
+<img [src]="imageUrl">
+
+<button (click)="ShowMessage()"> Click Me</button>
+
+<p>{{message}}</p>
+
+<input (input)="Show($event)"> 
+<p>{{type}}</p>
+
+<input [(ngModel)]="username" placeholder="Enter Your Username">
+<p>{{username}}</p>
+
+<p>{{count}}</p>
+<button (click)="Increment()">+</button>
+<button (click)="Decrement()">-</button>
+<button (click)="Reset()">Reset</button>

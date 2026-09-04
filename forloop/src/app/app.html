@@ -1,0 +1,18 @@
+<!-- @for (item of items; track $index) {
+  <h2>{{item}}</h2>
+} -->
+
+<!-- @for (u of users; track u.name) {
+  <div>
+    <h4>Name  {{u.name}}</h4>
+    <h4>Age  {{u.age}}</h4>
+  </div>
+} -->
+
+@for (item of numbers; track $index) {
+  @if (item%2==0) {
+    <h4>{{item}} <br> This Number is Even  </h4>
+  } @else {
+    <h4>{{item}} <br>  This Number is Old  </h4>
+  }
+}
