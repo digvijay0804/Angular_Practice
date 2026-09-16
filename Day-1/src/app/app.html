@@ -1,0 +1,21 @@
+<h1>User Details</h1>
+
+<p>{{ user.name }}</p>
+<p>{{ user.email }}</p> 
+
+<p>{{ course.name }}</p>
+<p>{{ course.duration }}</p>
+<P>{{ product.name }}</P>
+<P>{{ product.price }}</P>
+
+
+<h2>Api Users</h2>
+
+@for (user of users; track user.id) {
+  <p>
+    ID: {{ user.id }} <br>
+    Name: {{ user.name }} <br>
+    Email: {{ user.email }}
+  </p>
+  <hr>
+}

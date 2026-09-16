@@ -9,5 +9,9 @@ import { RouterLink } from '@angular/router';
   styleUrl: './courses.css',
 })
 export class Courses {
-  imageUrl= "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvJdq76B_anIBt5TL2WW_V11_swO7mkSecMhL96HIVGQ&s";
+  selectedCourse = '';
+
+  showCourse(course: string) {
+    this.selectedCourse = course;
+  }
 }

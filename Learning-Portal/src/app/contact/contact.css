@@ -1,0 +1,64 @@
+:host {
+  display: block;
+}
+
+h2 {
+  text-align: center;
+  color: #312e81;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+label {
+  display: inline-block;
+  width: 90px;
+  margin-bottom: 18px;
+  color: #374151;
+  font-weight: 600;
+}
+
+input {
+  width: 300px;
+  padding: 11px 13px;
+  border: 1px solid #d1d5db;
+  border-radius: 7px;
+  outline: none;
+  font-size: 15px;
+}
+
+input:focus {
+  border-color: #4f46e5;
+  box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+}
+
+button {
+  margin: 10px 10px 10px 0;
+  padding: 11px 22px;
+  border: none;
+  border-radius: 8px;
+  background: #4f46e5;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #3730a3;
+}
+
+@media (max-width: 600px) {
+  label {
+    display: block;
+    width: auto;
+    margin-bottom: 5px;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  button {
+    margin-top: 15px;
+  }
+}

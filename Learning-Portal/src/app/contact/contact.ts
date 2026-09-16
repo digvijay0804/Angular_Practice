@@ -8,7 +8,9 @@ import { RouterLink } from '@angular/router';
   styleUrl: './contact.css',
 })
 export class Contact {
+  submitted = false;
   submitForm() {
-  console.log('Form Submitted');
-}
+    this.submitted = true;
+    console.log('Form Submitted');
+  }
 }

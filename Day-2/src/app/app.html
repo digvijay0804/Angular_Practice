@@ -1,0 +1,17 @@
+<h2>Observable</h2>
+<p>{{ message }}</p>
+
+<h2>Numbers</h2>
+<p>{{ numbers }}</p>
+
+<h2>Promise</h2>
+<p>{{ promiseMessage }}</p>
+
+<h2>Parent to Child</h2>
+
+<app-child
+  [name]="studentName"
+  (messageEvent)="childMessage = $event">
+</app-child>
+
+<p>Message from Child: {{ childMessage }}</p>

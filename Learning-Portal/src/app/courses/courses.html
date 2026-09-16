@@ -1,6 +1,11 @@
 <h2>Learning-Portal Courses</h2>
+<button (click)="showCourse('Angular Basics')">Angular Basics</button>
 
-<h3>Angular Basics</h3>
+
+@if (selectedCourse === 'Angular Basics') {
+<p>
+    course: Angular Basics
+</p>
 <p>
     Duration : 3 Month
 </p>
@@ -13,7 +18,14 @@
 <p>
     Learn Angular fundamentals and components.
 </p>
-<h3> JavaScript Fundamentals </h3>
+}
+
+<button (click)="showCourse('JavaScript Fundamentals')">JavaScript Fundamentals</button>
+
+@if (selectedCourse === 'JavaScript Fundamentals') {
+<p>
+    course: JavaScript Fundamentals
+</p>
 <p>
     Duration : 3 Month
 </p>
@@ -26,8 +38,13 @@
 <p>
     Learn JavaScript basics, functions and objects.
 </p>
+}
+<button (click)="showCourse('HTML & CSS')">HTML & CSS</button>
 
-<h3>HTML & CSS</h3>
+@if (selectedCourse === 'HTML & CSS') {
+<p>
+    course: HTML & CSS
+</p>
 <p>
     Duration : 3 Month
 </p>
@@ -40,7 +57,8 @@
 <p>
     Learn how to create and style web pages.
 </p>
+}
 
-<img [src]="imageUrl" ><br>
+<hr>
 
 <button routerLink="/contact">Next</button>

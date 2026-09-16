@@ -1,0 +1,19 @@
+<h1>Angular API Practice</h1>
+
+<button (click)="getUser()">Get User</button>
+<button (click)="newuser()">Create User</button>
+<button (click)="updateuser()">Update User</button>
+<button (click)="deleteuser()">Delete User</button>
+<button (click)="testObservable()">Test Observable</button>
+
+@if (user.id) {
+  <div>
+    <h2>User Details</h2>
+
+    <p><strong>ID:</strong> {{ user.id }}</p>
+    <p><strong>Name:</strong> {{ user.name }}</p>
+    <p><strong>Email:</strong> {{ user.email }}</p>
+    <p><strong>Phone:</strong> {{ user.phone }}</p>
+    <p><strong>Website:</strong> {{ user.website }}</p>
+  </div>
+}

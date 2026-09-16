@@ -1,0 +1,19 @@
+<!-- <h2>Counter App</h2>
+
+<p> Current Count :{{CounterStore.count()}}</p>
+
+<button (click)="CounterStore.Increment()">+</button>
+<button (click)="CounterStore.Decrement()">-</button>
+<button (click)="CounterStore.Reset()">Reset</button> -->
+
+<h2> Application </h2>
+
+@if (UserStore.user()) {
+    <p> Well-Come {{UserStore.user()!.name}}</p>
+    @if (UserStore.isAdmin()) {
+        <p> Admin Access</p>
+    }
+    <button (click)="UserStore.logout()">Logout</button>
+}@else {
+    <button (click)="UserStore.login('Digvijay', 'admin')">Login</button>
+}

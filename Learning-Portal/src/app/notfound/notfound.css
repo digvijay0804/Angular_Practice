@@ -1,0 +1,25 @@
+:host {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 60vh;
+}
+
+h2 {
+  margin: 0;
+  padding: 40px 60px;
+  text-align: center;
+  color: #dc2626;
+  background: #ffffff;
+  border-radius: 15px;
+  font-size: 32px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  border: 1px solid #fee2e2;
+}
+
+@media (max-width: 600px) {
+  h2 {
+    padding: 30px 20px;
+    font-size: 24px;
+  }
+}
