@@ -1,0 +1,54 @@
+<div class="dashboard">
+
+  <div class="dashboard-header">
+    <div>
+      <h1>Dashboard</h1>
+      <p>Welcome to RepairDesk</p>
+    </div>
+
+    <button routerLink="/repairs" class="add-btn">
+      + Add Repair
+    </button>
+  </div>
+
+  <div class="stats-grid">
+
+    <div class="stat-card">
+      <h3>Total Repairs</h3>
+      <h2>0</h2>
+      <p>All repair requests</p>
+    </div>
+
+    <div class="stat-card">
+      <h3>Received</h3>
+      <h2>0</h2>
+      <p>New devices received</p>
+    </div>
+
+    <div class="stat-card">
+      <h3>In Repair</h3>
+      <h2>0</h2>
+      <p>Currently being repaired</p>
+    </div>
+
+    <div class="stat-card">
+      <h3>Ready</h3>
+      <h2>0</h2>
+      <p>Ready for delivery</p>
+    </div>
+
+  </div>
+
+  <div class="recent-section">
+    <h2>Recent Repairs</h2>
+
+    <div class="empty-state">
+      <p>No repairs found.</p>
+
+      <button routerLink="/repairs" class="add-btn">
+        Add First Repair
+      </button>
+    </div>
+  </div>
+
+</div>

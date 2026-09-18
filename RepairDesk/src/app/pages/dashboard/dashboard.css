@@ -1,0 +1,87 @@
+.dashboard {
+  padding: 30px;
+  background: #f5f7fb;
+  min-height: calc(100vh - 80px);
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.dashboard-header h1 {
+  margin: 0;
+  font-size: 32px;
+}
+
+.dashboard-header p {
+  margin: 8px 0 0;
+  color: #666;
+}
+
+.add-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  background: #2563eb;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.add-btn:hover {
+  background: #1d4ed8;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.stat-card {
+  background: white;
+  padding: 22px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.stat-card h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #555;
+}
+
+.stat-card h2 {
+  margin: 12px 0;
+  font-size: 32px;
+}
+
+.stat-card p {
+  margin: 0;
+  color: #777;
+}
+
+.recent-section {
+  margin-top: 30px;
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.recent-section h2 {
+  margin-top: 0;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 35px;
+  color: #777;
+}
+
+.empty-state .add-btn {
+  margin-top: 10px;
+}

@@ -1,0 +1,16 @@
+h2 {
+  margin-bottom: 10px;
+}
+
+a {
+  display: inline-block;
+  margin: 15px 0;
+  text-decoration: none;
+}
+
+button {
+  padding: 8px 18px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}

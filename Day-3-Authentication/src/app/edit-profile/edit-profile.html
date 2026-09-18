@@ -1,0 +1,29 @@
+<h2>Edit Profile</h2>
+
+<label>Email:</label>
+<br>
+
+<input
+  type="text"
+  [(ngModel)]="email"
+  (ngModelChange)="onChange()"
+  placeholder="Enter email"
+>
+
+<br><br>
+
+<label>Password:</label>
+<br>
+
+<input
+  type="email"
+  [(ngModel)]="password"
+  (ngModelChange)="onChange()"
+  placeholder="Enter password"
+>
+
+<br><br>
+
+@if (hasChanges) {
+  <p>You have unsaved changes.</p>
+}

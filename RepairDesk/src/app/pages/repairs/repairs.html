@@ -1,0 +1,209 @@
+<div class="repairs-page">
+
+  <div class="page-header">
+    <div>
+      <h1>Add Repair</h1>
+      <p>Enter customer and device repair details</p>
+    </div>
+  </div>
+
+  @if (successMessage) {
+    <div class="success-message">
+      {{ successMessage }}
+    </div>
+  }
+
+  <form class="repair-form" (ngSubmit)="saveRepair()">
+
+    <h2>Repair Details</h2>
+
+    <div class="form-grid">
+      <div class="form-group">
+        <label>Customer Name</label>
+        <input
+          type="text"
+          name="customerName"
+          [(ngModel)]="customerName"
+          placeholder="Enter customer name">
+      </div>
+      <div class="form-group">
+        <label>Mobile Number</label>
+        <input
+          type="tel"
+          name="mobile"
+          [(ngModel)]="mobile"
+          placeholder="Enter mobile number">
+      </div>
+      <div class="form-group">
+        <label>Device Type</label>
+
+        <select
+          name="deviceType"
+          [(ngModel)]="deviceType">
+
+          <option value="">Select Device</option>
+          <option value="Laptop">Laptop</option>
+          <option value="Desktop">Desktop</option>
+          <option value="Mobile">Mobile</option>
+
+        </select>
+      </div>
+      <div class="form-group">
+        <label>Brand</label>
+        <input
+          type="text"
+          name="brand"
+          [(ngModel)]="brand"
+          placeholder="Enter device brand">
+      </div>
+      <div class="form-group">
+        <label>Model</label>
+        <input
+          type="text"
+          name="model"
+          [(ngModel)]="model"
+          placeholder="Enter device model">
+      </div>
+      <div class="form-group">
+        <label>Estimated Cost</label>
+        <input
+          type="number"
+          name="estimatedCost"
+          [(ngModel)]="estimatedCost"
+          placeholder="Enter estimated cost">
+      </div>
+      <div class="form-group">
+        <label>Technician</label>
+        <input
+          type="text"
+          name="technician"
+          [(ngModel)]="technician"
+          placeholder="Enter technician name">
+      </div>
+      <div class="form-group">
+        <label>Status</label>
+
+        <select
+          name="status"
+          [(ngModel)]="status">
+
+          <option value="Received">Received</option>
+          <option value="Diagnosing">Diagnosing</option>
+          <option value="In Repair">In Repair</option>
+          <option value="Ready">Ready</option>
+          <option value="Delivered">Delivered</option>
+
+        </select>
+      </div>
+      <div class="form-group full-width">
+        <label>Problem Description</label>
+
+        <textarea
+          name="problem"
+          [(ngModel)]="problem"
+          placeholder="Describe the problem">
+        </textarea>
+      </div>
+      <div class="form-group full-width">
+        <label>Notes</label>
+
+        <textarea
+          name="notes"
+          [(ngModel)]="notes"
+          placeholder="Additional notes">
+        </textarea>
+      </div>
+
+    </div>
+    <div class="form-actions">
+
+      <button
+        type="submit"
+        class="save-btn">
+        Save Repair
+      </button>
+
+      <button
+        type="button"
+        class="cancel-btn">
+        Cancel
+      </button>
+
+    </div>
+
+  </form>
+  <div class="repairs-list">
+
+    <h2>Repair List</h2>
+
+    @if (repairs.length === 0) {
+      <p>No repairs added yet.</p>
+    }
+
+    @for (repair of repairs; track $index) {
+
+      <div class="repair-item">
+
+        <h3>{{ repair.customerName }}</h3>
+
+        <p>
+          <strong>Mobile:</strong>
+          {{ repair.mobile }}
+        </p>
+
+        <p>
+          <strong>Device:</strong>
+          {{ repair.deviceType }} -
+          {{ repair.brand }}
+          {{ repair.model }}
+        </p>
+
+        <p>
+          <strong>Problem:</strong>
+          {{ repair.problem }}
+        </p>
+
+        <p>
+          <strong>Estimated Cost:</strong>
+          ₹{{ repair.estimatedCost }}
+        </p>
+
+        <p>
+          <strong>Technician:</strong>
+          {{ repair.technician }}
+        </p>
+
+        <p>
+          <strong>Received Date:</strong>
+          {{ repair.receivedDate }}
+        </p>
+
+        <p>
+          <strong>Status:</strong>
+          {{ repair.status }}
+        </p>
+        <div class="repair-actions">
+
+          <button
+            type="button"
+            class="edit-btn"
+            (click)="editRepair($index)">
+            Edit
+          </button>
+
+          <button
+            type="button"
+            class="delete-btn"
+            (click)="deleteRepair($index)">
+            Delete
+          </button>
+
+        </div>
+
+      </div>
+
+    }
+
+  </div>
+
+</div>
